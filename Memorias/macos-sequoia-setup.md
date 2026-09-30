@@ -1,46 +1,43 @@
-# macOS Sequoia Dark — Setup no Pop!_OS 24.04 COSMIC
+# macOS Sequoia Dark — Setup Completo no Pop!_OS 24.04 COSMIC
 
-## Status de aplicacao automatica (por Hermes)
+## 1. Modificações Visuais Aplicadas Diretamente
 
-### Aplicado via terminal
-- [x] Tema Dark ativo (`com.system76.CosmicTheme.Dark`)
-- [x] Cor primaria: `#1E1E1E` (igual macOS Sequoia Dark)
-- [x] Cor de accent: `#0A84FF` (azul macOS)
-- [x] Frosted glass: Heavy (efeito translucido igual macOS)
-- [x] Bordas arredondadas aumentadas (radius_m: 14px)
-- [x] Dock: autohide, centralizado, opacidade 0.85, bordas arredondadas 16px, margem 6px
-- [x] Panel (barra topo): expandido, tamanho XS, relogio centralizado
-- [x] Wallpaper: Sequoia Dark oficial baixado em ~/Pictures/macOS-Walls/Sequoia-Dark.png
-- [x] Icones: Papirus-Dark instalado
-- [x] Fonte: Inter 13 configurada (substituta do SF Pro)
-- [x] Script brain-sync criado em ~/Applications/brain-sync.sh
+- **Tema de Janelas e Cores:**
+  - Base: `#1E1E1E` (Dark Grey estilo macOS)
+  - Acento: `#0A84FF` (Azul clássico da Apple)
+  - Frosted Glass (Blur): Ativado em modo Heavy
+  - Raio dos cantos arredondados: Estilo macOS (radius_m: 14px)
+  - Botões de janelas (GTK): Controles no lado esquerdo (`close,minimize,maximize:`)
 
-### Requer intervencao manual (fazer pela interface grafica)
+- **Ícones e Cursores:**
+  - Tema de Ícones: **WhiteSur-dark** (cópia fiel dos ícones do macOS Big Sur / Sonoma / Sequoia)
+  - Tema de Cursor: **WhiteSur-cursors** (cursor oficial do macOS)
+  - Tema GTK legado: **WhiteSur-Dark-blue** instalado em `~/.themes` e configurado no GTK 3/4.
 
-#### 1. Aplicar Wallpaper
-   COSMIC Settings → Desktop → Wallpaper → Add picture
-   Caminho: ~/Pictures/macOS-Walls/Sequoia-Dark.png
+- **Dock Inferior:**
+  - Centralizado, flutuante (não expande até as bordas).
+  - Opacidade: 0.85 com cantos arredondados (16px).
+  - Configurado como App Dock limpo (Launcher + AppList + Minimizados).
+  - Auto-ocultação inteligente (OnDemand).
 
-#### 2. Aplicar icones Papirus-Dark
-   COSMIC Settings → Desktop → Appearance → Icon theme → Papirus-Dark
+- **Barra Superior (Panel):**
+  - Fixa no topo (estilo Menu Bar do Mac).
+  - Relógio e data centralizados.
+  - Botões de apps/workspaces à esquerda (substituindo o menu Apple).
+  - Centro de controle / status à direita (Áudio, Wi-Fi, Bluetooth, Bateria, Notificações).
 
-#### 3. Fonte Inter
-   COSMIC Settings → Desktop → Appearance → Font → Inter 13
+- **Papel de Parede:**
+  - Wallpaper oficial do **macOS Sequoia Dark** baixado em alta resolução em `~/Pictures/macOS-Walls/Sequoia-Dark.png`.
 
-#### 4. Frosted Glass
-   COSMIC Settings → Desktop → Appearance → Style → ligar "Frosted" (translucencia)
+---
 
-#### 5. Launcher estilo Spotlight
-   O COSMIC ja tem o Pop Launcher (tecla Super).
-   Para mudcar o atalho para Alt+Space (igual Mac):
-   COSMIC Settings → Keyboard → Shortcuts → System → Launcher = Alt+Space
+## 2. Ajustes Finais no COSMIC Settings (Interface Gráfica)
 
-#### 6. Botoes de janela (opcional - mais parecido com Mac)
-   COSMIC Settings → Desktop → Window Management → Place controls on left
+Para ativar os novos ícones e tema nas janelas nativas do COSMIC:
 
-## Notas de restauracao
-Se reinstalar em outra maquina, copiar os dirs:
-- ~/.config/cosmic/ (todas as configuracoes do COSMIC)
-- ~/Pictures/macOS-Walls/ (wallpapers)
-- ~/Applications/ (scripts utilitarios)
-- ~/HermesBrain/ (este repo = segundo cerebro)
+1. Abra **COSMIC Settings** (Super / Tecla Windows e digite "Settings").
+2. Vá em **Desktop** → **Appearance**:
+   - **Icon theme:** Escolha **WhiteSur-dark**.
+   - **Cursor:** Escolha **WhiteSur-cursors**.
+3. Vá em **Desktop** → **Window Management**:
+   - Marque a opção para posicionar os botões de controle na **esquerda** (Place controls on left).
